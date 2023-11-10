@@ -109,19 +109,18 @@ ex )
 }
 ```
 ## SETTING🔧
-
-package.json
-"type" :"module" 을 추가해주게 되면 import 문을 쓸수 있기 때문이다.
+**Apollo server ** 오픈소스 사용 
 ```
-import { ApolloServer , gql } from "apollo-server";
-
-const {ApolloServer,gql} = require("apollo-server")
-
+$ npm i apollo-server grahql
 ```
+ApolloServer는 GraphQL 서버 인스턴스를 만들어주는 생성자이다.
+<img width="507" alt="image" src="https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/6307183d-e66b-4122-a916-5c68be08c120">     
+
 ```
 $ npm i nodemon -D 
 ```
 파일을 저장할때마다 nodemon 이 서버를 재시작 시키는 역할을 해준다. 나은 개발을 위한 것   
+
 
 ```
 $ npm run dev
@@ -134,12 +133,21 @@ $ npm run dev
 ![image](https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/03112ba5-8058-4979-9549-5db977a076db)
 
 
-## CODE💡
+## CODE💡   
+
+package.json
+"type" :"module" 을 추가해주게 되면 import 문을 쓸수 있기 때문이다.
+```
+import { ApolloServer , gql } from "apollo-server";
+
+const {ApolloServer,gql} = require("apollo-server")
+
+```
 
 ```
 const typeDefs = gql``    
 ```
-여기에다 type 들을 지정해준다.
+여기에다 type 들을 지정해준다. gql은 자바스크립트로 GraphQL 스키마를 정의하기 위해 사용되는 템플릿 리터럴 태그입니다.   
 ```
 #GET /text
 #GET /hello
