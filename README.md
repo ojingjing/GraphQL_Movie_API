@@ -1,4 +1,4 @@
-# GraphQL로 영화 API 만들기
+# GraphQL로 영화 API 만들기 🎥
 
 ---
 node.js , GraahQL , HASURA (내 db에 즉각적으로 graph api를 만들어준다)
@@ -127,15 +127,12 @@ $ npm i nodemon -D
 $ npm run dev
 ```
 로 실행해서 성공하게 되면   
-![성공한 화면 ](https://prod-files-secure.s3.us-west-2.amazonaws.com/16e6340f-59ac-4816-babc-7d1babda6a27/5fb03a31-5a30-4af5-8890-63bad67e415c/Untitled.png)     
-![주소로 이동하면 나오는 화면 polar studio이다.](https://prod-files-secure.s3.us-west-2.amazonaws.com/16e6340f-59ac-4816-babc-7d1babda6a27/9593396b-2e3d-4ca3-bb57-1c581ed41f72/Untitled.png)    
-![입장하면 보이는 화면 Root >Query 에있는걸 볼수 있고 우리가 적어준 필드가 나타난 것을 알수 있다.](https://prod-files-secure.s3.us-west-2.amazonaws.com/16e6340f-59ac-4816-babc-7d1babda6a27/53730495-8477-4785-a8b8-417ae7bd6a64/Untitled.png)
+![image](https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/0e79665f-e0d0-4cbf-960a-9edd8d7b6864)
 
-입장하면 보이는 화면 Root >Query 에있는걸 볼수 있고 우리가 적어준 필드가 나타난 것을 알수 있다.
+![image](https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/587573ce-6c6a-4af5-959e-753f51489707)
 
-주소로 이동하면 나오는 화면 polar studio이다.
+![image](https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/03112ba5-8058-4979-9549-5db977a076db)
 
-성공한 화면
 
 ## CODE
 
@@ -146,14 +143,31 @@ const typeDefs = gql``
 ```
 #GET /text
 #GET /hello
+#POST,PUT,DELETE
 const typeDefs = gql`
     type Query {
         text: String
         hello:String
     }
+	type Mutation{
+	    postTweet(text:String , userId :ID) :Tweet  # authentication
+	  }
 `;
 
 ```
 GraphAL의 Query는 REST api 에서 GET으로 받아는 것과 동일한 뜻이라고 생각하면 된다. ⇒사용자가 requset 하고싶어하는것을 선언하면 된다.
+```
+const resolvers = {    
+  Query: {
+    tweet() {
+      console.log("I'm called");
+      return null;
+    },
+  },
+};
+const server = new ApolloServer({ typeDefs, resolvers });
+```
+resolver은 사용자가 호출할때 쓰는것이다.
 
-https://creative-respect-76a.notion.site/ecole-5Day-67ca5266c2524ccaab16fca90b12491b?pvs=4
+---
+[노션주소]https://creative-respect-76a.notion.site/ecole-5Day-67ca5266c2524ccaab16fca90b12491b?pvs=4
