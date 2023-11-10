@@ -113,7 +113,7 @@ ex )
 ```
 $ npm i apollo-server grahql
 ```
-ApolloServer는 GraphQL 서버 인스턴스를 만들어주는 생성자이다.
+ApolloServer는 GraphQL 서버 인스턴스를 만들어주는 생성자이다.       
 <img width="507" alt="image" src="https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/6307183d-e66b-4122-a916-5c68be08c120">     
 
 ```
@@ -183,3 +183,7 @@ nullable filed 방지용 이다. 이걸쓰면 값이 있어야한다 null일경�
 
 ---
 [노션주소]https://creative-respect-76a.notion.site/ecole-5Day-67ca5266c2524ccaab16fca90b12491b?pvs=4
+
+---
+### REFERENCE
+https://koonsland.tistory.com/148
