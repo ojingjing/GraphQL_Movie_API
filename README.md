@@ -108,7 +108,7 @@ ex )
   }]
 }
 ```
-## SETTING   
+## SETTING🔧
 
 package.json
 "type" :"module" 을 추가해주게 되면 import 문을 쓸수 있기 때문이다.
@@ -134,7 +134,7 @@ $ npm run dev
 ![image](https://github.com/ojingjing/GraphQL_Movie_API/assets/48702158/03112ba5-8058-4979-9549-5db977a076db)
 
 
-## CODE
+## CODE💡
 
 ```
 const typeDefs = gql``    
