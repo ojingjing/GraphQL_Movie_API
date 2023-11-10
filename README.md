@@ -169,5 +169,9 @@ const server = new ApolloServer({ typeDefs, resolvers });
 ```
 resolver은 사용자가 호출할때 쓰는것이다.
 
+### !연산자    
+
+nullable filed 방지용 이다. 이걸쓰면 값이 있어야한다 null일경우 에러 발생 시킴   
+
 ---
 [노션주소]https://creative-respect-76a.notion.site/ecole-5Day-67ca5266c2524ccaab16fca90b12491b?pvs=4
