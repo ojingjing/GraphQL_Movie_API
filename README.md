@@ -1,7 +1,7 @@
 # GraphQL로 영화 API 만들기 🎥
 
 ---
-node.js , GraahQL , HASURA (내 db에 즉각적으로 graph api를 만들어준다)
+node.js , GraphQL , HASURA (내 db에 즉각적으로 graph api를 만들어준다)
 ---
 
 ## GraphQL이란 ?
